@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<style>
+      Body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+button{
+      border-radius: 5px;
+      width:100px;
+      padding:4px;
+}
+#container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+</style>
+
+
+
+  </head>
+ <Body>
+<div id="container">
+ <p><b>Click the button to get the greeting</b></p>
+ <button onclick="myfunction1()">Greeting</button><br>
+  <p id="demo1"></p>
+ <p><b>Click the button to get day</b></p>
+ <button onclick="myfunction2()">Day</button>
+ 
+ <p id="demo2"></p>
+</div>
+ </Body>
+ <script>
+ function myfunction1()
+ {
+ var greeting;
+ if(new Date().getHours()<18)
+ greeting="Goodday";
+ else
+ greeting="Goodevening";
+ document.getElementById("demo1").innerHTML=greeting;
+       }
+ function myfunction2()
+ {
+ var day;
+ var d=new Date();
+ switch(d.getDay())
+ {
+ 
+ case 0:day="sunday";
+ break;
+ case 1:day="monday";
+ break;
+ case 2:day="tuesday";
+ break;
+ case 3:day="wednessday";
+ break;
+ case 4:day="thursday";
+ break;
+ case 5:day="friday";
+ break;
+ case 6:day="saturday";
+ break;
+}
+
+ document.getElementById("demo2").innerHTML=day;
+       }
+ </script> 
+ </html>
